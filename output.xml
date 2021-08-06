@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.10 on win32)" generated="20210806 09:42:57.601" rpa="false" schemaversion="2">
+<suite id="s1" name="Ejemplo" source="C:\Users\Nayel\Documents\Dylan\Estudio\Udemy\QA Testing\automation\ejemplo.robot">
+<test id="s1-t1" name="C001 Busqueda de palabras en google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210806 09:43:01.146" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20210806 09:43:01.145" endtime="20210806 09:43:09.439"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210806 09:43:09.440" endtime="20210806 09:43:09.669"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<arg>casos de prueba</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210806 09:43:09.671" level="INFO">Typing text 'casos de prueba' into text field 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210806 09:43:09.670" endtime="20210806 09:43:10.302"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<arg>\ue007</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210806 09:43:10.317" level="INFO">Sending key(s) ('\ue007',) to xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input element.</msg>
+<msg timestamp="20210806 09:43:12.907" level="INFO">Sending key </msg>
+<status status="PASS" starttime="20210806 09:43:10.303" endtime="20210806 09:43:15.528"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>casos de prueba - Buscar con Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210806 09:43:15.546" level="INFO">Page title is 'casos de prueba - Buscar con Google'.</msg>
+<status status="PASS" starttime="20210806 09:43:15.529" endtime="20210806 09:43:15.546"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>casos de prueba</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210806 09:43:15.676" level="INFO">Current page contains text 'casos de prueba'.</msg>
+<status status="PASS" starttime="20210806 09:43:15.547" endtime="20210806 09:43:15.676"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210806 09:43:15.677" endtime="20210806 09:43:19.419"/>
+</kw>
+<status status="PASS" starttime="20210806 09:43:01.142" endtime="20210806 09:43:19.420"/>
+</test>
+<doc>Existe en un documento de texto los pasos manuales
+Esta es mi primera prueba</doc>
+<status status="PASS" starttime="20210806 09:42:57.605" endtime="20210806 09:43:19.422"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ejemplo">Ejemplo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
